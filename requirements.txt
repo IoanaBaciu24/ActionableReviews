@@ -1,0 +1,10 @@
+pandas
+matplotlib
+numpy
+openai
+scikit-learn
+scipy
+tqdm
+google-play-scraper
+langchain
+sentence-transformers

@@ -1,0 +1,8 @@
+{
+    "app_name": "com.duolingo",
+    "language": "en",
+    "country": "us",
+    "count": 5000,
+
+    "path_out": "./data/reviews_duolingo_{0}stars.csv"
+}
