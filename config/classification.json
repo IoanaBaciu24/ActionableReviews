@@ -1,0 +1,6 @@
+{
+    "model":"gpt-3.5-turbo-instruct",
+    "type":"instruct",
+    "dataset_path":"data/reviews_duolingo_1stars.csv",
+    "output_path":"data/classified_duolingo_1stars.csv"
+}

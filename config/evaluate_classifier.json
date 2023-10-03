@@ -1,0 +1,5 @@
+{
+    "dataset_path": "app_actionable_classification/clf_dataset.csv",
+    "model": "gpt-3.5-turbo-instruct",
+    "type": "instruct"
+}
