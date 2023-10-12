@@ -1,11 +1,7 @@
 """Module responsible for classifying wether a review contains an actionable part"""
 from abc import ABC, abstractmethod
-from typing import Any
 from langchain.pydantic_v1 import BaseModel, Field
-from langchain.chains.openai_functions import (
-    create_openai_fn_chain,
-    create_structured_output_chain,
-)
+from langchain.chains.openai_functions import create_structured_output_chain
 from langchain.chat_models import ChatOpenAI
 from langchain.llms import OpenAI
 from langchain.output_parsers import PydanticOutputParser
@@ -52,7 +48,6 @@ class ActionableReviewClassifierChat(ActionableReviewClassifier):
     """Classifier for reviews, uses chat models"""
     def __init__(self, model: str = "gpt-3.5-turbo"):
         self.llm = ChatOpenAI(model=model, temperature=0)
-      
 
     def __call__(self, review: str) -> bool:
         prompt = ChatPromptTemplate.from_messages(
@@ -84,7 +79,7 @@ class ActionableReviewClassifierInstructLLM(ActionableReviewClassifier):
         output = self.llm(prompt)
         # Ok so this is a very ugly hack. Normally I would try to format the output as a json,
         # to have structured output, but this is just a small pet project
-        try: 
+        try:
             return eval(output.strip()).actionable
         except:
             print(output)

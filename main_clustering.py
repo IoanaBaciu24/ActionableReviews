@@ -22,7 +22,8 @@ if __name__ == "__main__":
     if config["elbow"] == "True":
         min_clusters = int(config["min_clusters"])
         max_clusters = int(config["max_clusters"])
-        dataset_embeddings["embedding_list"] = dataset_embeddings["embedding"].apply(lambda x: embedding_string_to_list(x))
+        dataset_embeddings["embedding_list"] = dataset_embeddings["embedding"]. \
+            apply(lambda x: embedding_string_to_list(x))
         embeddings = np.array(dataset_embeddings["embedding_list"].to_list())
         k_sizes, intertias = run_kmeans(embeddings, min_clusters, max_clusters)
         if config["do_plot"] == "True":
@@ -30,7 +31,8 @@ if __name__ == "__main__":
     # run kmeans and label dataset
     if config["label_reviews"] == "True":
         k = config["number_of_clusters"]
-        dataset_embeddings["embedding_list"] = dataset_embeddings["embedding"].apply(lambda x: embedding_string_to_list(x))
+        dataset_embeddings["embedding_list"] = dataset_embeddings["embedding"]. \
+            apply(lambda x: embedding_string_to_list(x))
         embeddings = np.array(dataset_embeddings["embedding_list"].to_list())
         dataset_embeddings["label"] = get_labels_via_kmeans(embeddings, k)
         dataset_embeddings.to_csv(config["output_labels_path"], index=False)

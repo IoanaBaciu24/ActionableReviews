@@ -5,12 +5,14 @@ from config import get_json_from_config
 from app_actionable_classification.classifier import ActionableReviewClassifierChat, \
     ActionableReviewClassifierInstructLLM, ActionableReviewClassifier
 
-def run_classification(dataset: pd.DataFrame, 
+def run_classification(dataset: pd.DataFrame,
                        classifier: ActionableReviewClassifier, output_path: str):
+    """Save to file classes for the reviews"""
     dataset["class"] = dataset["content"].apply(lambda x: classifier(x))
     dataset.to_csv(output_path, index=False)
 
 def classify_dataset(config: dict):
+    """Wrapper function for the classification step"""
     dataset = pd.read_csv(config["dataset_path"])
     if config["type"] == "chat":
         classifier = ActionableReviewClassifierChat(model=config["model"])

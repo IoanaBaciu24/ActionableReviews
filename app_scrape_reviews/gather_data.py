@@ -18,6 +18,7 @@ class GoogleScrapInfo:
     filter_score_with: int = None
 
 def create_info(config: dict, sort: Sort, filter_score_with=None):
+    """Function that creates a GoogleScrapInfo object"""
     return GoogleScrapInfo(
         app_name=config["app_name"],
         language=config["language"],

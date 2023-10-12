@@ -12,7 +12,7 @@ def run_kmeans(dataset: np.array, min_clusters: int, max_clusters: int) -> [List
     inertias = []
     for k in number_of_clusters:
         kmeans = KMeans(n_clusters=k)
-        kmeans.fit(dataset)  
+        kmeans.fit(dataset)
         inertias.append(kmeans.inertia_)
     return number_of_clusters, inertias
 

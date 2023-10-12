@@ -7,6 +7,7 @@ from app_actionable_classification.classifier import ActionableReviewClassifierC
         ActionableReviewClassifierInstructLLM, ActionableReviewClassifier
 
 def run_classifier(dataset: pd.DataFrame, clf: ActionableReviewClassifier):
+    """Function that runs the classifier on the dataset, returns classification reoprt"""
     reviews = dataset["content"]
     predictions = []
     for review in reviews:
