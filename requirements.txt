@@ -8,3 +8,5 @@ tqdm
 google-play-scraper
 langchain
 sentence-transformers
+plotly
+nbformat==4.2.0

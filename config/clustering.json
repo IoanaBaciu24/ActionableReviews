@@ -1,0 +1,15 @@
+{
+    "embed": "False",
+    "source_path": "data/classified_duolingo_1stars.csv",
+    "embeddings_path": "data/embedded_reviews_duolingo_1star_not_normalized.csv",
+    "embedding_model": "embaas/sentence-transformers-e5-large-v2",
+
+    "elbow":"False",
+    "min_clusters":5,
+    "max_clusters":150,
+    "do_plot":"False",
+
+    "label_reviews": "True",
+    "number_of_clusters": 40,
+    "output_labels_path": "data/labeled_embeddings_duolingo_1star_40_cls.csv"
+}
