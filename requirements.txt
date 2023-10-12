@@ -6,7 +6,7 @@ scikit-learn
 scipy
 tqdm
 google-play-scraper
-langchain
+langchain==0.0.300
 sentence-transformers
 plotly
 nbformat==4.2.0
