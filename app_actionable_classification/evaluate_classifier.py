@@ -28,5 +28,5 @@ def main(config: dict):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('config', type=str, help='Path to the dataset')
-    config = get_json_from_config(parser.parse_args().config)
-    main(config)
+    config_json = get_json_from_config(parser.parse_args().config)
+    main(config_json)

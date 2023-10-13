@@ -17,6 +17,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('config', type=str, help='Path to the config file')
     config_path = parser.parse_args().config
-    config = get_json_from_config(config_path)
-    path_out = config["path_out"]
-    create_reviwews_on_stars(path_out, config)
+    config_json = get_json_from_config(config_path)
+    path_out = config_json["path_out"]
+    create_reviwews_on_stars(path_out, config_json)
