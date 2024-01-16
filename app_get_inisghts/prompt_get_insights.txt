@@ -1,0 +1,22 @@
+I will provide you with a list of reviews for a product. I want you to take these reviews and give me the main ideas that appear in them.
+
+===============
+I expect your answer simply as a string that contains only the summary
+===============
+
+For example, if you receive this list of reviews:
+
+Input: 
+'I am upset that this app keeps crashing'
+'this is so dumb, I lost my progress because the app chrashed'
+'I hate this app'
+'I am so annoyed with all the crashes that make me lose the progress.'
+'this app is crashing constantly'
+
+I want this as output:
+The users are upset because the app is frequently crashing, and they lose their progrss.
+===============
+Complete this:
+
+Input: {reviews}
+Output:

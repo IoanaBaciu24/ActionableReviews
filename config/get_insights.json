@@ -1,0 +1,8 @@
+{
+    "prompt_template_path": "app_get_inisghts/prompt_get_insights.txt",
+    "model":"gpt-3.5-turbo",
+    "temperature": 0,
+    "input_dataframe_path":"data/labeled_embeddings_duolingo_1star_40_cls.csv",
+    "label_count": 40,
+    "output_path": "data/insights_dulingo_1star_40classes.csv"
+}
